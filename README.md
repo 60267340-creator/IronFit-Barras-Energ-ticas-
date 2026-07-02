@@ -1,29 +1,41 @@
-# IronFit - Barras Energéticas 🏋️‍♂️🍫
+# IronFit - Barra Energética Natural 🏋️‍♂️
 
-¡Bienvenido al repositorio de *IronFit*! Este proyecto es una aplicación/sitio web enfocado en la gestión, venta o promoción de barras energéticas artesanales y nutritivas para deportistas.
+Landing page oficial de **IronFit**, barra energética natural.
+
+## 🌐 Demo
+
+La página está publicada con GitHub Pages:
+
+👉 `https://tu-usuario.github.io/ironfit-landing/`
+
+*(Reemplaza el link de arriba por tu URL real una vez que actives GitHub Pages).*
+
+## 📱 Acceso rápido
+
+Escanea el código QR (sin marca de agua) para ver la página desde tu celular.
+
+## 🛠️ Tecnologías
+
+- HTML5
+- CSS3
+
+## 📂 Estructura del proyecto
+
+```
+ironfit-landing/
+├── index.html      # Página principal
+└── README.md        # Este archivo
+```
+
+## 🚀 Cómo verlo localmente
+
+1. Clona este repositorio
+2. Abre `index.html` en tu navegador
+
+## ✨ Sobre IronFit
+
+Barra energética natural, pensada para brindar energía saludable de forma práctica.
 
 ---
 
-## 🚀 Características Principales
-* *Catálogo de Productos:* Visualización de las barras energéticas disponibles, ingredientes y tabla nutricional.
-* *Carrito de Compras:* (Si aplica) Sistema para agregar productos y gestionar el pedido.
-* *Diseño Responsivo:* Adaptado para dispositivos móviles, tablets y computadoras.
-
----
-
-## 🛠️ Tecnologías Utilizadas
-Menciona aquí las herramientas que usaste para construir el proyecto:
-* *Frontend:* HTML5, CSS3, JavaScript (o React / Vue / Angular si aplica)
-* *Estilos:* Bootstrap / Tailwind CSS (opcional)
-* *Backend:* Node.js / Python / PHP (opcional)
-* *Base de Datos:* MongoDB / MySQL (opcional)
-
----
-
-## 📦 Instalación y Configuración
-
-Para correr este proyecto de forma local, sigue estos pasos:
-
-1. *Clona el repositorio:*
-   ```bash
-   https://github.com/60267340-creator/IronFit-Barras-Energ-ticas-
+Proyecto desarrollado por Jhon · Estudiante de Ingeniería de Sistemas y Computación, Universidad Continental
