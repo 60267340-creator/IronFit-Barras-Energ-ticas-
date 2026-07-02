@@ -6,7 +6,7 @@ Landing page oficial de **IronFit**, barra energética natural.
 
 La página está publicada con GitHub Pages:
 
-👉 `https://tu-usuario.github.io/ironfit-landing/`
+👉 `https://github.com/60267340-creator/IronFit-Barras-Energ-ticas-.git`
 
 *(Reemplaza el link de arriba por tu URL real una vez que actives GitHub Pages).*
 
