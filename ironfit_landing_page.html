@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronFit - Barra Energética Natural</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cacao: {
+                            50: '#fdf8f5',
+                            100: '#f3e5db',
+                            500: '#5c3a21',
+                            700: '#4a2c11',
+                            900: '#2b1604',
+                        },
+                        forest: {
+                            100: '#e1efe4',
+                            500: '#2e6f40',
+                            700: '#1e4b2b',
+                        },
+                        beet: {
+                            100: '#fce8eb',
+                            500: '#9e1b32',
+                            600: '#801124',
+                        },
+                        banana: '#f3cd42'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap');
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #fdfaf6;
+        }
+        h1, h2, h3, .font-title {
+            font-family: 'Fredoka', sans-serif;
+        }
+        .bg-pattern {
+            background-color: #fdfaf6;
+            background-image: radial-gradient(#4a2c1108 1.5px, transparent 1.5px), radial-gradient(#2e6f4008 1.5px, #fdfaf6 1.5px);
+            background-size: 24px 24px;
+            background-position: 0 0, 12px 12px;
+        }
+    </style>
+</head>
+<body class="bg-pattern text-gray-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Header / Navbar Minimalista -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-cacao-100 shadow-sm transition-all duration-300">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-beet-500 flex items-center justify-center text-white font-bold shadow-md shadow-beet-500/20 text-lg">
+                    ⚡
+                </div>
+                <div>
+                    <span class="text-xl font-bold text-cacao-700 tracking-wide block">IRONFIT</span>
+                    <span class="text-xs text-forest-500 font-semibold uppercase tracking-wider block -mt-1">by Golden Girls</span>
+                </div>
+            </div>
+            <a href="#calculadora" class="bg-forest-500 hover:bg-forest-700 text-white font-bold py-2 px-4 rounded-full transition-all text-sm shadow-md shadow-forest-500/10">
+                ¡Calcular Mi Energía!
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden px-4 py-12 md:py-16 max-w-4xl mx-auto w-full">
+        <div class="text-center relative z-10 space-y-6">
+            <div class="inline-flex items-center space-x-2 bg-beet-100 text-beet-600 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+                <span>🔋 Barra Escolar Contra la Anemia</span>
+                <span class="w-2 h-2 rounded-full bg-beet-500 animate-pulse"></span>
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl font-extrabold text-cacao-700 leading-tight">
+                Recarga tu mente, <br>
+                <span class="text-forest-500">alimenta tu vitalidad</span>
+            </h1>
+            
+            <p class="text-base md:text-lg text-gray-600 max-w-xl mx-auto leading-relaxed">
+                La innovadora barra energética escolar de avena, cacao y beterraga, compactada en frío. El snack ideal para combatir el cansancio y mejorar las notas sin sabores aburridos.
+            </p>
+
+            <!-- Sellos Libres de Octógonos -->
+            <div class="flex justify-center items-center space-x-4 pt-4">
+                <div class="flex flex-col items-center bg-white border-2 border-forest-500 text-forest-700 p-3 rounded-2xl w-24 shadow-sm">
+                    <span class="text-2xl">🌱</span>
+                    <span class="text-[10px] font-bold uppercase text-center mt-1">100%<br>Natural</span>
+                </div>
+                <div class="flex flex-col items-center bg-white border-2 border-beet-500 text-beet-600 p-3 rounded-2xl w-24 shadow-sm">
+                    <span class="text-2xl">🩸</span>
+                    <span class="text-[10px] font-bold uppercase text-center mt-1">Rico en<br>Hierro</span>
+                </div>
+                <div class="flex flex-col items-center bg-white border-2 border-cacao-500 text-cacao-700 p-3 rounded-2xl w-24 shadow-sm">
+                    <span class="text-2xl">❄️</span>
+                    <span class="text-[10px] font-bold uppercase text-center mt-1">Procesado<br>En Frío</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-4xl mx-auto px-4 pb-20 w-full space-y-12">
+
+        <!-- Beneficios Clave (Tarjetas) -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-3xl p-6 border-b-4 border-beet-500 shadow-md hover:shadow-lg transition-all duration-300">
+                <div class="w-12 h-12 rounded-2xl bg-beet-100 flex items-center justify-center text-beet-500 text-2xl mb-4">🩺</div>
+                <h3 class="text-lg font-bold text-cacao-700 mb-2">Previene la Anemia</h3>
+                <p class="text-sm text-gray-600">Aporta hierro no hemínico de forma natural gracias a la beterraga fresca finamente rallada y combinada con el cacao orgánico.</p>
+            </div>
+            
+            <div class="bg-white rounded-3xl p-6 border-b-4 border-banana shadow-md hover:shadow-lg transition-all duration-300">
+                <div class="w-12 h-12 rounded-2xl bg-yellow-100 flex items-center justify-center text-yellow-600 text-2xl mb-4">⚡</div>
+                <h3 class="text-lg font-bold text-cacao-700 mb-2">Energía Prolongada</h3>
+                <p class="text-sm text-gray-600">La miel y el plátano te activan rápido, mientras que los carbohidratos complejos de la avena te sostienen por más de 2 horas de clase.</p>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 border-b-4 border-forest-500 shadow-md hover:shadow-lg transition-all duration-300">
+                <div class="w-12 h-12 rounded-2xl bg-forest-100 flex items-center justify-center text-forest-500 text-2xl mb-4">🍫</div>
+                <h3 class="text-lg font-bold text-cacao-700 mb-2">Sabor Increíble</h3>
+                <p class="text-sm text-gray-600">El cacao puro enmascara perfectamente el sabor terroso de la beterraga, transformándola en un delicioso chocolate artesanal.</p>
+            </div>
+        </section>
+
+        <!-- Calculadora de Nutrición e Impacto (INTERACTIVO) -->
+        <section id="calculadora" class="bg-white rounded-3xl p-6 md:p-8 border border-cacao-100 shadow-lg">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-cacao-700 flex items-center gap-2">
+                        <span>📊</span> Calculadora de Energía y Hierro
+                    </h2>
+                    <p class="text-sm text-gray-500">Descubre cómo IronFit mejora tu consumo nutricional semanal.</p>
+                </div>
+                <span class="mt-2 md:mt-0 text-xs font-bold text-forest-500 bg-forest-100 px-3 py-1 rounded-full self-start">
+                    Basado en 1 barra (40g)
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Controles -->
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-bold text-cacao-700 mb-2">
+                            ¿Cuántas barras de IronFit planeas consumir a la semana?
+                        </label>
+                        <div class="flex items-center space-x-4">
+                            <input type="range" id="barsRange" min="1" max="10" value="3" class="w-full accent-beet-500">
+                            <span id="barsValue" class="text-2xl font-bold text-beet-500 bg-beet-100 px-4 py-1.5 rounded-2xl min-w-[50px] text-center">3</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-cacao-50 p-4 rounded-2xl border border-cacao-100 text-sm space-y-2">
+                        <p class="font-bold text-cacao-700">💡 Tip de Nutrición:</p>
+                        <p id="calcTip" class="text-gray-600">Consumir 3 barras a la semana te ayuda a mantener niveles óptimos de concentración durante los cursos más difíciles.</p>
+                    </div>
+                </div>
+
+                <!-- Resultados Visuales -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-beet-100/40 p-4 rounded-2xl border border-beet-100 text-center flex flex-col justify-center">
+                        <span class="text-xs font-bold text-beet-600 uppercase tracking-wider block mb-1">Hierro Total</span>
+                        <span id="ironTotal" class="text-3xl font-extrabold text-beet-600">8.7 mg</span>
+                        <span class="text-xs text-gray-500 mt-1">Aporte de Hierro</span>
+                    </div>
+
+                    <div class="bg-forest-100/40 p-4 rounded-2xl border border-forest-100 text-center flex flex-col justify-center">
+                        <span class="text-xs font-bold text-forest-700 uppercase tracking-wider block mb-1">Energía</span>
+                        <span id="energyTotal" class="text-3xl font-extrabold text-forest-700">405 kcal</span>
+                        <span class="text-xs text-gray-500 mt-1">Calorías saludables</span>
+                    </div>
+
+                    <div class="col-span-2 bg-yellow-100/40 p-4 rounded-2xl border border-yellow-100 text-center">
+                        <span class="text-xs font-bold text-yellow-700 uppercase tracking-wider block mb-1">Cobertura del Requerimiento Diario</span>
+                        <div class="w-full bg-gray-200 rounded-full h-3 mt-2 overflow-hidden">
+                            <div id="progressBar" class="bg-forest-500 h-3 rounded-full transition-all duration-500" style="width: 63%"></div>
+                        </div>
+                        <span id="progressText" class="text-xs font-bold text-forest-700 block mt-2">¡Cubre el 63% del requerimiento semanal preventivo de hierro!</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabla Nutricional Transparente -->
+        <section class="bg-white rounded-3xl p-6 md:p-8 border border-cacao-100 shadow-md">
+            <h2 class="text-2xl font-bold text-cacao-700 mb-4 flex items-center gap-2">
+                <span>📋</span> Información Nutricional Completa
+            </h2>
+            <p class="text-sm text-gray-500 mb-6">Elaborado siguiendo estándares alimenticios amigables para niños y jóvenes de la I.E. Bicentenario 1267 La Campiña.</p>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-cacao-700 text-white font-title text-sm">
+                            <th class="p-3 rounded-l-2xl">Nutriente</th>
+                            <th class="p-3">Por Barra (40g)</th>
+                            <th class="p-3 rounded-r-2xl">% Valor Diario*</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-cacao-100 text-sm">
+                        <tr>
+                            <td class="p-3 font-semibold">Energía (Calorías)</td>
+                            <td class="p-3">135 kcal</td>
+                            <td class="p-3">6.7%</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 font-semibold">Proteínas</td>
+                            <td class="p-3">3.1 g</td>
+                            <td class="p-3">6.2%</td>
+                        </tr>
+                        <tr class="bg-beet-100/20 font-bold text-beet-600">
+                            <td class="p-3">Hierro (Fe) 🩸</td>
+                            <td class="p-3">2.9 mg</td>
+                            <td class="p-3">21%</td>
+                        </tr>
+                        <tr class="bg-forest-100/20 font-bold text-forest-700">
+                            <td class="p-3">Vitamina C 🍊</td>
+                            <td class="p-3">4.2 mg</td>
+                            <td class="p-3">5.6%</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 font-semibold">Carbohidratos Totales</td>
+                            <td class="p-3">26.5 g</td>
+                            <td class="p-3">9.6%</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 font-semibold">Fibra Alimentaria</td>
+                            <td class="p-3">3.2 g</td>
+                            <td class="p-3">12.8%</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 font-semibold">Grasas Totales</td>
+                            <td class="p-3">1.8 g</td>
+                            <td class="p-3">2.8%</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 font-semibold">Sodio</td>
+                            <td class="p-3">8 mg</td>
+                            <td class="p-3">0.3%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-[10px] text-gray-400 mt-4 text-center">
+                * Porcentaje de valor diario basado en una dieta de referencia de 2000 kcal para escolares en etapa de crecimiento.
+            </p>
+        </section>
+
+        <!-- Tarjeta de Fidelidad Interactiva -->
+        <section class="bg-white rounded-3xl p-6 md:p-8 border-2 border-dashed border-forest-500 shadow-md relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-24 h-24 bg-forest-100 rounded-full opacity-50"></div>
+            
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-cacao-700 flex items-center gap-2">
+                    <span>🎟️</span> Tarjeta de Fidelidad Digital
+                </h2>
+                <p class="text-sm text-gray-500">¿Tienes tu tarjeta física? ¡Prueba cómo funciona aquí! Por cada barra obtienes un sello. ¡Consigue 7 y llévate una totalmente gratis!</p>
+            </div>
+
+            <!-- Grid de Sellos -->
+            <div class="grid grid-cols-4 md:grid-cols-8 gap-3 max-w-2xl mx-auto mb-6">
+                <!-- Sellos 1 al 7 -->
+                <button onclick="toggleStamp(1)" id="stamp-1" class="aspect-square bg-gray-100 hover:bg-forest-100 border border-dashed border-gray-300 rounded-2xl flex items-center justify-center font-bold text-lg text-gray-400 transition-all">1</button>
+                <button onclick="toggleStamp(2)" id="stamp-2" class="aspect-square bg-gray-100 hover:bg-forest-100 border border-dashed border-gray-300 rounded-2xl flex items-center justify-center font-bold text-lg text-gray-400 transition-all">2</button>
+                <button onclick="toggleStamp(3)" id="stamp-3" class="aspect-square bg-gray-100 hover:bg-forest-100 border border-dashed border-gray-300 rounded-2xl flex items-center justify-center font-bold text-lg text-gray-400 transition-all">3</button>
+                <button onclick="toggleStamp(4)" id="stamp-4" class="aspect-square bg-gray-100 hover:bg-forest-100 border border-dashed border-gray-300 rounded-2xl flex items-center justify-center font-bold text-lg text-gray-400 transition-all">4</button>
+                <button onclick="toggleStamp(5)" id="stamp-5" class="aspect-square bg-gray-100 hover:bg-forest-100 border border-dashed border-gray-300 rounded-2xl flex items-center justify-center font-bold text-lg text-gray-400 transition-all">5</button>
+                <button onclick="toggleStamp(6)" id="stamp-6" class="aspect-square bg-gray-100 hover:bg-forest-100 border border-dashed border-gray-300 rounded-2xl flex items-center justify-center font-bold text-lg text-gray-400 transition-all">6</button>
+                <button onclick="toggleStamp(7)" id="stamp-7" class="aspect-square bg-gray-100 hover:bg-forest-100 border border-dashed border-gray-300 rounded-2xl flex items-center justify-center font-bold text-lg text-gray-400 transition-all">7</button>
+                <!-- Sello Premio -->
+                <div id="stamp-prize" class="aspect-square bg-yellow-100 border border-yellow-300 rounded-2xl flex flex-col items-center justify-center font-bold text-xs text-yellow-600">
+                    <span class="text-lg">🎁</span>
+                    <span>GRATIS</span>
+                </div>
+            </div>
+
+            <!-- Estado de la Tarjeta -->
+            <div class="text-center">
+                <p id="fidelidadMsg" class="text-sm text-gray-600 font-semibold mb-3">Haz clic en los números de arriba para simular la compra de una barra.</p>
+                <button onclick="resetStamps()" class="text-xs text-red-500 font-bold hover:underline">Reiniciar Tarjeta</button>
+            </div>
+        </section>
+
+        <!-- Plan Lonchera Semanal & Cotización -->
+        <section class="bg-white rounded-3xl p-6 md:p-8 border border-cacao-100 shadow-md">
+            <h2 class="text-2xl font-bold text-cacao-700 mb-4 flex items-center gap-2">
+                <span>💼</span> Plan Lonchera Semanal para Padres
+            </h2>
+            <p class="text-sm text-gray-500 mb-6">Asegura la nutrición de tu hijo de lunes a viernes con un precio preferencial exclusivo. Retira el pack semanal en el quiosco escolar.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Detalles del Plan -->
+                <div class="space-y-4">
+                    <div class="p-4 rounded-2xl bg-forest-100/30 border border-forest-100">
+                        <h4 class="font-bold text-forest-700 text-base mb-1">📅 ¿Cómo funciona?</h4>
+                        <p class="text-xs text-gray-600">Se paga la suscripción los lunes por la mañana y el alumno o padre de familia recibe el paquete completo de 5 barras frescas listas para consumir en el recreo.</p>
+                    </div>
+
+                    <div class="flex items-center justify-between p-4 bg-cacao-50 rounded-2xl border border-cacao-100">
+                        <div>
+                            <span class="text-xs font-bold text-cacao-700 block">PRECIO REGULAR</span>
+                            <span class="text-lg font-bold text-gray-400 line-through">S/ 7.50</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs font-bold text-forest-500 block">DESCUENTO PLAN</span>
+                            <span class="text-2xl font-extrabold text-forest-700">S/ 6.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario Simple con integración real a WhatsApp -->
+                <div class="bg-cacao-50/50 p-6 rounded-2xl border border-cacao-100 flex flex-col justify-between">
+                    <div>
+                        <h4 class="font-bold text-cacao-700 text-sm mb-3">Reserva tu Pack Semanal</h4>
+                        <div class="space-y-3">
+                            <input type="text" id="parentName" placeholder="Tu nombre o del alumno" class="w-full p-2.5 rounded-xl border border-cacao-100 text-sm focus:ring-2 focus:ring-forest-500 outline-none">
+                            <select id="studentGrade" class="w-full p-2.5 rounded-xl border border-cacao-100 text-sm focus:ring-2 focus:ring-forest-500 outline-none">
+                                <option value="">Selecciona Grado / Aula</option>
+                                <option value="Primaria">Primaria (Menores)</option>
+                                <option value="5to Secundaria C">5to de Secundaria C</option>
+                                <option value="Otro">Otro Grado Secundaria</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button onclick="sendReservation()" class="w-full mt-4 bg-forest-500 hover:bg-forest-700 text-white font-bold py-3 px-4 rounded-xl transition-all text-sm shadow-md flex items-center justify-center gap-2">
+                        <span>📱</span> Reservar por WhatsApp
+                    </button>
+                    <p id="reservationFeedback" class="text-xs text-center text-forest-700 font-semibold mt-2 hidden">¡Conectando...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buzón de Sugerencias de Sabores -->
+        <section class="bg-white rounded-3xl p-6 md:p-8 border border-cacao-100 shadow-md">
+            <h2 class="text-2xl font-bold text-cacao-700 mb-4 flex items-center gap-2">
+                <span>💡</span> Buzón de Sugerencias y Sabores
+            </h2>
+            <p class="text-sm text-gray-500 mb-6">Queremos expandir IronFit. ¿Qué ingrediente te gustaría que sumemos en nuestra próxima receta experimental?</p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                <button onclick="voteFlavor('Coco Rallado 🥥')" class="p-4 bg-gray-50 hover:bg-beet-100/50 border border-cacao-100 rounded-2xl text-center transition-all group">
+                    <span class="text-2xl block mb-2 group-hover:scale-110 transition-transform">🥥</span>
+                    <span class="text-xs font-bold text-cacao-700 block">Coco Rallado</span>
+                </button>
+                <button onclick="voteFlavor('Pasas de Uva 🍇')" class="p-4 bg-gray-50 hover:bg-beet-100/50 border border-cacao-100 rounded-2xl text-center transition-all group">
+                    <span class="text-2xl block mb-2 group-hover:scale-110 transition-transform">🍇</span>
+                    <span class="text-xs font-bold text-cacao-700 block">Pasas Dulces</span>
+                </button>
+                <button onclick="voteFlavor('Semillas de Chía 🌱')" class="p-4 bg-gray-50 hover:bg-beet-100/50 border border-cacao-100 rounded-2xl text-center transition-all group">
+                    <span class="text-2xl block mb-2 group-hover:scale-110 transition-transform">🌱</span>
+                    <span class="text-xs font-bold text-cacao-700 block">Chía Orgánica</span>
+                </button>
+                <button onclick="voteFlavor('Arándanos Azules 🫐')" class="p-4 bg-gray-50 hover:bg-beet-100/50 border border-cacao-100 rounded-2xl text-center transition-all group">
+                    <span class="text-2xl block mb-2 group-hover:scale-110 transition-transform">🫐</span>
+                    <span class="text-xs font-bold text-cacao-700 block">Arándanos</span>
+                </button>
+            </div>
+
+            <div class="bg-cacao-50 p-4 rounded-2xl border border-cacao-100 flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl">📢</span>
+                    <div>
+                        <span class="text-xs font-bold text-cacao-700 block">ÚLTIMO VOTO DE LA COMUNIDAD</span>
+                        <span id="lastVote" class="text-sm font-semibold text-forest-700">¡Nadie ha votado aún! Elige arriba.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiénes Somos / El Equipo Emprendedor -->
+        <section class="bg-cacao-900 text-white rounded-3xl p-6 md:p-8 shadow-xl">
+            <div class="text-center max-w-lg mx-auto space-y-4 mb-8">
+                <span class="text-xs font-bold bg-forest-500 text-white px-3 py-1 rounded-full uppercase tracking-wider">
+                    Emprendimiento Estudiantil
+                </span>
+                <h2 class="text-3xl font-bold">Equipo Golden Girls</h2>
+                <p class="text-xs md:text-sm text-cacao-100">
+                    Estudiantes de 5to de Secundaria del Colegio Bicentenario 1267 La Campiña, comprometidas con el rendimiento académico y la salud física de sus compañeros.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="bg-cacao-700/50 p-4 rounded-2xl border border-cacao-700">
+                    <span class="text-2xl block mb-1">👑</span>
+                    <h4 class="font-bold text-sm text-yellow-400">Lisbeth Sullca Alvarado</h4>
+                    <p class="text-[11px] text-cacao-100 uppercase tracking-wider">Líder & Creadora de Sabor</p>
+                </div>
+                <div class="bg-cacao-700/50 p-4 rounded-2xl border border-cacao-700">
+                    <span class="text-2xl block mb-1">🔍</span>
+                    <h4 class="font-bold text-sm text-yellow-400">Ana Carina Marín Cáceres</h4>
+                    <p class="text-[11px] text-cacao-100 uppercase tracking-wider">Investigadora de Campo</p>
+                </div>
+                <div class="bg-cacao-700/50 p-4 rounded-2xl border border-cacao-700">
+                    <span class="text-2xl block mb-1">🎨</span>
+                    <h4 class="font-bold text-sm text-yellow-400">Evelyn Mendoza Aroni</h4>
+                    <p class="text-[11px] text-cacao-100 uppercase tracking-wider">Diseñadora de Marca</p>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-cacao-700 text-center text-xs text-cacao-100 space-y-1">
+                <p>Asesora de Educación para el Trabajo: <strong class="text-white">Edith Ccente Poma</strong></p>
+                <p>Ubicación: <strong class="text-white">Chosica, Lima, Perú</strong></p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Fijo -->
+    <footer class="mt-auto bg-cacao-900 border-t border-cacao-700 py-6 text-center text-xs text-cacao-100">
+        <p>© 2026 IronFit. Creado por Golden Girls en beneficio de la salud escolar.</p>
+        <p class="mt-1 text-[10px] text-cacao-100/50">Todos los ingredientes son 100% peruanos y sostenibles.</p>
+    </footer>
+
+    <!-- Script de Interactividad -->
+    <script>
+        // Variables de la calculadora
+        const range = document.getElementById('barsRange');
+        const rangeVal = document.getElementById('barsValue');
+        const ironTotalVal = document.getElementById('ironTotal');
+        const energyTotalVal = document.getElementById('energyTotal');
+        const progressBar = document.getElementById('progressBar');
+        const progressText = document.getElementById('progressText');
+        const calcTip = document.getElementById('calcTip');
+
+        // Tips dinámicos para la calculadora
+        const tips = [
+            "Consumir 1 barra a la semana es un excelente inicio para introducir fibra y vitaminas a tu rutina diaria.",
+            "Consumir 2 barras semanales ayuda a recuperar energía inmediatamente después de tus clases de Educación Física.",
+            "Consumir 3 barras a la semana te ayuda a mantener niveles óptimos de concentración durante las horas más largas del colegio.",
+            "Consumir 4 barras semanales disminuye notablemente el cansancio escolar antes de los recreos principales.",
+            "¡Excelente! 5 barras semanales aseguran un aporte de hierro preventivo continuo durante todos los días escolares de la semana.",
+            "6 barras semanales ofrecen un soporte integral para alumnos con un ritmo deportivo extraescolar exigente.",
+            "7 barras semanales te ayudan a eliminar la fatiga mental y reponer nutrientes clave de lunes a domingo.",
+            "Consumir 8 barras semanales garantiza que tengas un snack rico en hierro a la mano en todo momento.",
+            "Con 9 barras semanales aportas un balance continuo de energía que previene bajas de azúcar sin requerir dulces artificiales.",
+            "¡Plan Máximo! 10 barras semanales aseguran nutrición y energía óptima para compartir con tus mejores amigos."
+        ];
+
+        // Función actualizadora de cálculos
+        function updateCalc() {
+            const numBars = parseInt(range.value);
+            rangeVal.textContent = numBars;
+            
+            // Cálculos basados en los valores de la tabla nutricional
+            const iron = (numBars * 2.9).toFixed(1);
+            const energy = numBars * 135;
+            
+            // % de valor diario preventivo recomendado en una semana para jóvenes (meta preventiva aprox ~13.8mg)
+            const pct = Math.min(Math.round((iron / 13.8) * 100), 100);
+
+            ironTotalVal.textContent = `${iron} mg`;
+            energyTotalVal.textContent = `${energy} kcal`;
+            progressBar.style.width = `${pct}%`;
+            progressText.textContent = `¡Cubre el ${pct}% de la meta recomendada semanal de hierro preventivo!`;
+            
+            // Cambiar consejo dinámico
+            calcTip.textContent = tips[numBars - 1] || tips[2];
+        }
+
+        range.addEventListener('input', updateCalc);
+        updateCalc(); // Inicializar
+
+        // Fidelidad Digital
+        let activeStamps = 0;
+        function toggleStamp(id) {
+            const stampBtn = document.getElementById(`stamp-${id}`);
+            if (stampBtn.classList.contains('bg-forest-500')) {
+                // Desmarcar
+                stampBtn.classList.remove('bg-forest-500', 'text-white', 'border-transparent');
+                stampBtn.classList.add('bg-gray-100', 'text-gray-400', 'border-gray-300');
+                stampBtn.innerHTML = id;
+                activeStamps--;
+            } else {
+                // Marcar
+                stampBtn.classList.add('bg-forest-500', 'text-white', 'border-transparent');
+                stampBtn.classList.remove('bg-gray-100', 'text-gray-400', 'border-gray-300');
+                stampBtn.innerHTML = '🍫';
+                activeStamps++;
+            }
+
+            const feedback = document.getElementById('fidelidadMsg');
+            if (activeStamps === 7) {
+                feedback.innerHTML = '<span class="text-forest-700 font-extrabold text-base">🎉 ¡Felicidades! Completaste tu tarjeta. Reclama tu barra de premio gratis presentando tu tarjeta física al equipo Golden Girls.</span>';
+                document.getElementById('stamp-prize').classList.remove('bg-yellow-100', 'text-yellow-600');
+                document.getElementById('stamp-prize').classList.add('bg-yellow-400', 'text-cacao-900', 'animate-bounce');
+            } else {
+                feedback.innerHTML = `Llevas <strong>${activeStamps} de 7</strong> sellos marcados. ¡Sigue adelante!`;
+                document.getElementById('stamp-prize').classList.add('bg-yellow-100', 'text-yellow-600');
+                document.getElementById('stamp-prize').classList.remove('bg-yellow-400', 'text-cacao-900', 'animate-bounce');
+            }
+        }
+
+        function resetStamps() {
+            for (let i = 1; i <= 7; i++) {
+                const stampBtn = document.getElementById(`stamp-${i}`);
+                stampBtn.classList.remove('bg-forest-500', 'text-white', 'border-transparent');
+                stampBtn.classList.add('bg-gray-100', 'text-gray-400', 'border-gray-300');
+                stampBtn.innerHTML = i;
+            }
+            activeStamps = 0;
+            document.getElementById('fidelidadMsg').innerHTML = 'Haz clic en los números de arriba para simular la compra de una barra.';
+            document.getElementById('stamp-prize').classList.add('bg-yellow-100', 'text-yellow-600');
+            document.getElementById('stamp-prize').classList.remove('bg-yellow-400', 'text-cacao-900', 'animate-bounce');
+        }
+
+        // Integración con el WhatsApp real del usuario
+        function sendReservation() {
+            const parentName = document.getElementById('parentName').value.trim();
+            const studentGrade = document.getElementById('studentGrade').value;
+            const feedback = document.getElementById('reservationFeedback');
+
+            if (!parentName || !studentGrade) {
+                feedback.innerHTML = "⚠️ Por favor, ingresa tu nombre y grado para reservar.";
+                feedback.classList.remove('hidden', 'text-forest-700');
+                feedback.classList.add('text-red-500');
+                return;
+            }
+
+            // Construcción del mensaje para WhatsApp
+            const message = `¡Hola Golden Girls! Soy ${parentName} del grado ${studentGrade} y deseo reservar un Pack Semanal de IronFit por S/ 6.00 🍫🌱.`;
+            // Número proporcionado por el usuario (917565217) con código de Perú (+51)
+            const whatsappNumber = "51917565217"; 
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+            // Mostrar retroalimentación de éxito
+            feedback.innerHTML = `🚀 <strong>¡Redirigiendo a tu WhatsApp!</strong><br><span class="text-xs text-gray-500">Abriendo chat directo al 917 565 217...</span>`;
+            feedback.classList.remove('hidden', 'text-red-500');
+            feedback.classList.add('text-forest-700');
+
+            // Abrir WhatsApp en pestaña nueva después de 1 segundo
+            setTimeout(() => {
+                window.open(whatsappUrl, '_blank');
+            }, 1000);
+        }
+
+        // Buzón de Sugerencias
+        function voteFlavor(flavor) {
+            const lastVoteText = document.getElementById('lastVote');
+            lastVoteText.textContent = `¡Gracias por votar por ${flavor}! Registrado exitosamente en la encuesta estudiantil.`;
+        }
+    </script>
+</body>
+</html>
